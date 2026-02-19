@@ -1,5 +1,12 @@
 # Multi-Agent Orchestrator (The "Paramount" Assignment)
 
+> **🚀 Live Deployment Links (For Reviewers)**
+> *   **Frontend (App):** [https://multi-agent-orchestrator-paramount.vercel.app/](https://multi-agent-orchestrator-paramount-8njk2ys2v.vercel.app?_vercel_share=8ECMnotwLXWAkTK0SYuKKwO7d4oP6eeZ)
+> *   **Backend (API):** [https://multi-agent-orchestrator-paramount.onrender.com/docs](https://multi-agent-orchestrator-paramount.onrender.com/docs)
+> *   **Video Walkthrough:** [Insert Google Drive/Loom Link Here]
+
+---
+
 ## This Isn't Just a Chatbot.
 This is a state-aware orchestration engine. I built this to solve a specific problem: **LLMs are great at thinking, but bad at following a multi-step process without getting distracted.**
 
@@ -10,7 +17,11 @@ This system forces the AI to stay on track. It breaks a vague request into a pla
 *   **The Face:** Next.js + React. I used **CSS Grid** for the UI because flexbox alignment on status trackers is usually sloppy. This one is pixel-perfect.
 *   **The Intelligence:** Groq (Llama-3) for speed + Tavily for real-time truth.
 
-## How to Run It (The Short Version)
+## How It Works (Architecture)
+![System Architecture](Multi-Agent Task Orchestration System Architecture.png)
+
+## How to Run It (Locally)
+
 
 ### 1. The Backend (The Engine)
 You need to feed it API keys. I put a `.env.example` file in there, but you'll need your own `GROQ_API_KEY` and `TAVILY_API_KEY`.
@@ -40,7 +51,7 @@ npm run dev
 Go to `http://localhost:3000`.
 
 ## Features I'm Proud Of
-1.  **Real Persistance:** Refresh the page. Go ahead. Your research task is still there. I used `localStorage` because losing data is the worst UX.
+1.  **Real Persistence:** Refresh the page. Go ahead. Your research task is still there. I used `localStorage` because losing data is the worst UX.
 2.  **No "Fake News":** If the Researcher can't find a source via Tavily, it admits it. It doesn't make up URLs.
 3.  **The "Nuclear" CSS Fix:** You might notice the icons are perfectly centered. That took a custom Grid implementation. Details matter.
 
@@ -50,4 +61,5 @@ Go to `http://localhost:3000`.
 *   `frontend/src/components/`: The React logic.
 
 ---
-*Built for the Paramount Task. Ready for review.*
+**Author:** Pathange Omkareshwara Rao
+**Education:** Final Year B.Tech CSE-AI, Amrita Vishwa Vidyapeetham, Coimbatore
