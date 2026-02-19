@@ -7,14 +7,14 @@ These features were strictly required by `Multi-Agent_Take-Home_Assignment.md` a
 
 | Requirement | Implementation Status | Technical Detail |
 | :--- | :--- | :--- |
-| **Agent Abstraction** | [Done] DONE | `backend/app/agents/base.py` defines standard `Agent` class. |
-| **Orchestrator** | [Done] DONE | `backend/app/orchestrator.py` manages state & async execution. |
-| **State Model** | [Done] DONE | Full flow: `PLANNING` → `RESEARCHING` → `WRITING` → `REVIEWING` → `COMPLETED`. |
-| **API Endpoints** | [Done] DONE | `POST /tasks`, `GET /tasks/{id}`, `POST /validate-key` (Extra). |
-| **Task Submission UI** | [Done] DONE | React form with validation and loading states. |
-| **Progress Visualization** | [Done] DONE | Animated `StatusTracker` with step-by-step progress. |
-| **Results Display** | [Done] DONE | Markdown rendering of final report + collapsible System Logs. |
-| **Reviewer Integration** | [Done] DONE | Orchestrator handles `ReviewerAgent` feedback loop. |
+| **Agent Abstraction** | DONE | `backend/app/agents/base.py` defines standard `Agent` class. |
+| **Orchestrator** |  DONE | `backend/app/orchestrator.py` manages state & async execution. |
+| **State Model** |  DONE | Full flow: `PLANNING` → `RESEARCHING` → `WRITING` → `REVIEWING` → `COMPLETED`. |
+| **API Endpoints** |  DONE | `POST /tasks`, `GET /tasks/{id}`, `POST /validate-key` (Extra). |
+| **Task Submission UI** |  DONE | React form with validation and loading states. |
+| **Progress Visualization** |  DONE | Animated `StatusTracker` with step-by-step progress. |
+| **Results Display** |  DONE | Markdown rendering of final report + collapsible System Logs. |
+| **Reviewer Integration** | DONE | Orchestrator handles `ReviewerAgent` feedback loop. |
 
 ## 2. Simulations vs. Real Implementations
 The assignment allowed simulations. We exceeded this by integrating **Real AI** components.
@@ -37,6 +37,7 @@ We added these features to deliver a premium, production-ready experience.
 6.  **Security:** API Keys managed via `.env` files (Best Practice).
 7.  **Log Visualizer:** Frontend now displays internal agent logs for transparency.
 
-## 4. Evaluation & Testing
-*   **Evaluation Script:** A strict test script (`tests/strict_evaluation.py`) was run to verify the full pipeline end-to-end.
+## 4. Evaluation [Pre-Submission]
+*   **Method:** A strict evaluation script was run locally to verify the full pipeline end-to-end before packaging.
 *   **Result:** The system successfully handled a complex query ("Compare React vs Svelte"), found 3 real sources, and produced a final report.
+*   **Note:** The temporary test script used for this verification has been cleaned up for repo hygiene. The `backend/tests/` folder (unit tests) remains included as a bonus.
