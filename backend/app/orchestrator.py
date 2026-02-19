@@ -1,5 +1,6 @@
 import uuid
 import asyncio
+import os
 from typing import Dict, Optional
 from app.models import TaskStatusResponse, AgentStatus
 from app.agents.planner import PlannerAgent
@@ -8,7 +9,7 @@ from app.agents.writer import WriterAgent
 from app.agents.reviewer import ReviewerAgent
 from openai import AsyncOpenAI
 
-# Hardcoded Key as requested by User
+# Default fallback (Should be None in production to force .env usage)
 HARDCODED_API_KEY = None
 
 class Orchestrator:
@@ -41,8 +42,17 @@ class Orchestrator:
     def create_task(self, query: str, api_key: Optional[str] = None) -> str:
         task_id = str(uuid.uuid4())
         
-        # Use provided key or fallback to hardcoded
-        final_api_key = api_key if api_key and api_key.strip() else HARDCODED_API_KEY
+        # LOGIC FIX:
+        # 1. Try input key
+        # 2. Try GROQ_API_KEY env var
+        # 3. Try Hardcoded (None)
+        
+        final_api_key = api_key
+        if not final_api_key or not final_api_key.strip():
+             final_api_key = os.getenv("GROQ_API_KEY")
+        
+        if not final_api_key:
+             final_api_key = HARDCODED_API_KEY
         
         self.tasks[task_id] = {
             "id": task_id,
