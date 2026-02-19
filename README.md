@@ -18,7 +18,8 @@ This system forces the AI to stay on track. It breaks a vague request into a pla
 *   **The Intelligence:** Groq (Llama-3) for speed + Tavily for real-time truth.
 
 ## How It Works (Architecture)
-![System Architecture](Multi-Agent Task Orchestration System Architecture.png)
+![System Architecture](Multi-Agent%20Task%20Orchestration%20System%20Architecture.png)
+
 
 ## How to Run It (Locally)
 
