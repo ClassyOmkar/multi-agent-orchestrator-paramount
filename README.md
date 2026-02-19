@@ -1,4 +1,4 @@
-# Multi-Agent Orchestrator (The "Paramount" Project)
+# Multi-Agent Orchestrator (The "Paramount" Assignment)
 
 ## This Isn't Just a Chatbot.
 This is a state-aware orchestration engine. I built this to solve a specific problem: **LLMs are great at thinking, but bad at following a multi-step process without getting distracted.**
@@ -50,4 +50,4 @@ Go to `http://localhost:3000`.
 *   `frontend/src/components/`: The React logic.
 
 ---
-*Built for the Amrita/Paramount Internship Task. Ready for review.*
+*Built for the Paramount Task. Ready for review.*
