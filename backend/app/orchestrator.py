@@ -9,7 +9,7 @@ from app.agents.reviewer import ReviewerAgent
 from openai import AsyncOpenAI
 
 # Hardcoded Key as requested by User
-HARDCODED_API_KEY = "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"
+HARDCODED_API_KEY = None
 
 class Orchestrator:
     def __init__(self):
